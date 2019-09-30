@@ -45,7 +45,7 @@ class App extends Component {
   clearList = () => {
     console.log(`hit clear list`)
     this.setState({
-        data: [{},{}]
+        data: []
     })
 }
 
@@ -55,13 +55,18 @@ toggleTask = id => {
   console.log('task was toggled')
   this.setState({
     data: this.state.data.map(task => {
+      console.log(task.task, task.id, task.completed)
       if (task.id === id) {
-        return{...task, completed: !task.completed}
+        return{
+          task: task.task,
+          id: task.id, 
+          completed: !task.completed};
+         
       } else {
         return task;
       }
     })
-  })
+  });
 };
 
 

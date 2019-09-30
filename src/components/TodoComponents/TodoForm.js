@@ -17,7 +17,10 @@ export class TodoForm extends Component {
 
     taskSubmit = event => {
         event.preventDefault();
-        this.props.addTask(this.state.task)
+        this.props.addTask(this.state.task);
+        this.setState({
+            task: ''
+        });
     };
 
     
