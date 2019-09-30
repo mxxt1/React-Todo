@@ -42,13 +42,35 @@ class App extends Component {
     });
   }
 
+  clearList = () => {
+    console.log(`hit clear list`)
+    this.setState({
+        data: [{},{}]
+    })
+}
+
+
+
+toggleTask = id => {
+  console.log('task was toggled')
+  this.setState({
+    data: this.state.data.map(task => {
+      if (task.id === id) {
+        return{...task, completed: !task.completed}
+      } else {
+        return task;
+      }
+    })
+  })
+};
+
 
   render() {
     return (
       <div>
         <h2>Welcome to {this.state.name}'s Todo App!</h2>
-        <TodoForm addTask={this.addTask}/>
-        <TodoList data={this.state.data} />
+        <TodoForm addTask={this.addTask}/> 
+        <TodoList data={this.state.data} toggleTask={this.toggleTask} clearList={this.clearList} />
       </div>
     );
   }

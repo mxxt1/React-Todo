@@ -19,6 +19,8 @@ export class TodoForm extends Component {
         event.preventDefault();
         this.props.addTask(this.state.task)
     };
+
+    
     
     
     render() {
