@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 export class TodoForm extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             task: ''
         };

@@ -55,7 +55,7 @@ toggleTask = id => {
   console.log('task was toggled')
   this.setState({
     data: this.state.data.map(task => {
-      console.log(task.task, task.id, task.completed)
+      // console.log(task.task, task.id, task.completed)
       if (task.id === id) {
         return{
           task: task.task,
