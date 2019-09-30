@@ -1,19 +1,17 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
-import { matcherHint } from 'jest-matcher-utils';
 
 
 
 const data = [
   {
-    task: 'Test 1',
+    task: 'Seed 1',
     id: 0,
     completed: false
   },
   {
-    task: 'Test 2',
+    task: 'Seed 2',
     id: 1,
     completed: false
   }
@@ -21,7 +19,7 @@ const data = [
 
 
 
-class App extends React.Component {
+class App extends Component {
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
