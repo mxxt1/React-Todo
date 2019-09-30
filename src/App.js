@@ -29,7 +29,7 @@ class App extends Component {
       name: 'Matt',
       data: data
     };
-  }
+  };
 
   addTask = taskContent => {
     const newTask = {
@@ -40,14 +40,14 @@ class App extends Component {
     this.setState({
       data: [...this.state.data, newTask]
     });
-  }
+  };
 
   clearList = () => {
     console.log(`hit clear list`)
     this.setState({
-        data: []
-    })
-}
+        data: this.state.data.filter(task => !task.completed)
+    });
+};
 
 
 
