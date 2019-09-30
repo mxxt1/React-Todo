@@ -9,6 +9,7 @@ export class TodoForm extends Component {
     }
     
     handleChanges = event => {
+        // let taskValue = event.target.name
         this.setState({
         [event.target.name]: event.target.value
         });
