@@ -1,7 +1,16 @@
 import React, {Component} from 'react';
 import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
+import styled from 'styled-components';
 
+const StyledContainer = styled.div`
+  width: 80%;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+`;
 
 
 const data = [
@@ -72,11 +81,11 @@ toggleTask = id => {
 
   render() {
     return (
-      <div>
+      <StyledContainer>
         <h2>Welcome to {this.state.name}'s Todo App!</h2>
         <TodoForm addTask={this.addTask}/> 
         <TodoList data={this.state.data} toggleTask={this.toggleTask} clearList={this.clearList} />
-      </div>
+      </StyledContainer>
     );
   }
 }
